@@ -27,10 +27,10 @@ class SpreadsheetsController < ApplicationController
     @spreadsheet = Spreadsheet.new(spreadsheet_params)
 
     if @spreadsheet.save
-      redirect_to @spreadsheet, notice: 'Spreadsheet was successfully created.' }
+      redirect_to @spreadsheet, notice: 'Spreadsheet was successfully created.' 
       render :show, status: :created, location: @spreadsheet
     else
-      render :new }
+      render :new 
         
     end
     
