@@ -15,3 +15,12 @@
 //=require bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+$(function(){
+   $('.change-password .password-link').click(function(){
+      $(this).hide();
+      $('.change-password .form-group-password').show();
+      return false;
+   });
+});

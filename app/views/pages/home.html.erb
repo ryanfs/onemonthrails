@@ -1,10 +1,28 @@
-<div class='jumbotron center'>
-	<h1>This is my app</h1>
-	<% if user_signed_in? %>
-		<p>Welcome home!</p>
-	<% else %>	
-		<p><%= link_to "Log in", new_user_session_path, class:'btn btn-default btn-large' %> 
-		<%= link_to "Sign up", new_user_registration_path , class:'btn btn-primary btn-large' %></p>
-	<% end %>
+<% if user_signed_in? %>
+<%= render 'layouts/app_header' %>
+
+
+<% else %>
+ <p>  <%= link_to "Sign in", new_user_session_path %></p>
+<% end %>
+<br />
+<div class = 'saved-searches'>
+	Recent Searches
+	<div class="nav-divider"></div>
+	<div class = "saved-search-queries"><a href= "#">SRDs in New York</a></div>
+	<div class = "saved-search-queries"><a href= "#">SRDs in Atlanta</a></div>
+	<div class = "saved-search-queries"><a href= "#">Account Executives in LA</a></div>
+	<div class = "saved-search-queries"><a href= "#">SRDs in New York</a></div>
+</div>
+<div class='box'>
+	<h2>Generate Leads</h2>
+	<div class="nav-divider"></div>
+
+		<div class="form-group">
+
+	    </div>
 	
+      <div class="form-group">
+        
+      </div>
 </div>

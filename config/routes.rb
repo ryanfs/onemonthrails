@@ -1,9 +1,23 @@
 Rails.application.routes.draw do
-  resources :spreadsheets
-  devise_for :users
-  root 'pages#home' #root_path
 
-  get 'about' => 'pages#about' #about_path
+  devise_for :users
+  devise_scope :user do
+    authenticated :user do
+    root 'pages#home', as: :authenticated_root
+    get 'about' => 'pages#about' #about_path
+  end
+
+  unauthenticated do
+    root 'devise/sessions#new', as: :unauthenticated_root
+  end
+end
+
+
+
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
