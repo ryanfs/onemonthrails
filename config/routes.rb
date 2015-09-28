@@ -4,11 +4,17 @@ Rails.application.routes.draw do
   devise_scope :user do
     authenticated :user do
     root 'pages#home', as: :authenticated_root
-    get 'about' => 'pages#about' #about_path
+    get '/about' => 'pages#about' #about_path
+    get '/search' => 'pages#search'
+    get '/results' => 'pages#show'
+    resources :pages
+    resources :spreadsheets
   end
 
   unauthenticated do
     root 'devise/sessions#new', as: :unauthenticated_root
+    get '/about' => 'pages#about' #about_path
+
   end
 end
 

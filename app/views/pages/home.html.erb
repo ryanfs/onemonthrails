@@ -6,13 +6,12 @@
  <p>  <%= link_to "Sign in", new_user_session_path %></p>
 <% end %>
 <br />
+
+
 <div class = 'saved-searches'>
 	Recent Searches
 	<div class="nav-divider"></div>
-	<div class = "saved-search-queries"><a href= "#">SRDs in New York</a></div>
-	<div class = "saved-search-queries"><a href= "#">SRDs in Atlanta</a></div>
-	<div class = "saved-search-queries"><a href= "#">Account Executives in LA</a></div>
-	<div class = "saved-search-queries"><a href= "#">SRDs in New York</a></div>
+	<%= render 'spreadsheets/result' %>
 </div>
 <div class='box'>
 	<h2>Generate Leads</h2>

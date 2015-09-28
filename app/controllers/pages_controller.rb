@@ -3,6 +3,10 @@ def new
     @search = Search.new
 end
 
+def home
+  @spreadsheets = Spreadsheet.all
+end
+
 def create
   @search = Search.new(params[:contact])
   @search.request = request
@@ -15,5 +19,11 @@ end
 
   def about
   end
+
+def search
+  @spreadsheet = Spreadsheet.create(description:'test')
+  redirect_to '/spreadsheets/'+@spreadsheet.id.to_s
+end
+
 
 end

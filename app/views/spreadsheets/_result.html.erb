@@ -1,0 +1,8 @@
+<div class = "saved-search-queries">
+	<% @spreadsheets.each do |spreadsheet| %>
+		<p><%= link_to "#{spreadsheet.description}", spreadsheet %>
+	 		<!--<span class="small">-->
+		</p>
+		<hr style="margin-top:-20px">
+	<% end %>
+</div>
