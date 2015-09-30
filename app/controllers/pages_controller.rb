@@ -5,6 +5,16 @@ end
 
 def home
   @spreadsheets = Spreadsheet.all
+
+  if params[:q].present?
+    @jobs = IndeedAPI.search_jobs(q: params[:q])
+    @results = @jobs.results
+    @description = @results.company
+  else
+    @jobs = []
+    @results =[]
+  end
+
 end
 
 def create

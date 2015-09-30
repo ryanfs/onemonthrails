@@ -18,10 +18,20 @@
 	<div class="nav-divider"></div>
 
 		<div class="form-group">
+		<%= form_tag('/', method: 'get') do %>
+			<%= text_field_tag(:q) %>
+			<%= submit_tag('Search') %>
+		<% end %>
 
-	    </div>
-	
-      <div class="form-group">
-        
-      </div>
+			<% @results.each do |job| %>
+				<div>
+					<p><strong><%= link_to job.job_title, job.url, target: "_blank" %></strong></p>
+					<p><%= job.company %>, <small><%= job.formatted_location %></small></p>
+					
+
+				</div>
+			<hr>
+			<% end %>
+	   </div>
+
 </div>
