@@ -5,7 +5,7 @@
 <% else %>
  <p>  <%= link_to "Sign in", new_user_session_path %></p>
 <% end %>
-<br />
+
 
 
 <div class = 'saved-searches'>
@@ -14,15 +14,11 @@
 	<%= render 'spreadsheets/result' %>
 </div>
 <div class='box'>
-	<h2>Generate Leads</h2>
+	<h2>New Opportunities for <%= "#{current_user.company}" %></h2>
 	<div class="nav-divider"></div>
 
 		<div class="form-group">
-		<%= form_tag('/', method: 'get') do %>
-			<%= text_field_tag(:q) %>
-			<%= submit_tag('Search') %>
-		<% end %>
-
+		
 			<% @results.each do |job| %>
 				<div>
 					<p><strong><%= link_to job.job_title, job.url, target: "_blank" %></strong></p>

@@ -6,13 +6,17 @@
     padding: .3em 1.3em;
 }
 
+.search-bar {
+    
+}
+
 .box {
     border: 1px solid #dfdfdf;
     background-color: white;
     padding: 0px 20px;
     border-radius: 2px;
     margin:25px auto !important;
-    width: 72%;
+    width: 65%;
     display: block;
     float: left;
 }
@@ -26,10 +30,12 @@
     border-radius: 2px;
     margin:0 auto;
     float: left;
-    width: 16%;
+    width: 25%;
     display: block;
 }
 
+.search-input-field {
+}
 
 .form-control {
     width: 94%!important;
@@ -185,7 +191,7 @@ input, select, textarea{
 }
 
 header {
-    padding: 20px 32px;
+    padding: 20px 32px 20px 0px;
     border-bottom:1px solid #dfdfdf;
     height: 32px;
 }

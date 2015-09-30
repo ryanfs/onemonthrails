@@ -9,7 +9,7 @@ def home
   if params[:q].present?
     @jobs = IndeedAPI.search_jobs(q: params[:q])
     @results = @jobs.results
-    @description = @results.company
+    #@description = @results.company
   else
     @jobs = []
     @results =[]
