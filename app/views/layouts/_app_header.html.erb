@@ -1,13 +1,12 @@
 <header>
-    <div class="page-title">
         <!--<h1>Headline text</h1>-->
-            <div class="search-bar"><%= form_tag('/', method: 'get') do %>
+            <div class="top-left-nav">[logo]</div>
+            <div class="search-bar">
+              <%= form_tag('/', method: 'get', class: "search-bar") do %>
               <%= text_field_tag (:q), nil, :placeholder => 'Search by job title', class: "search-input-field"  %>
               <%= submit_tag('Go') %>
             <% end %>
-    </div>
-
-</div>
+            </div>
     <div class="top-nav">
 <!--<a href="#" class="gear-icon">&nbsp;&nbsp;&nbsp;&nbsp;</a> -->
       <ul class="nav navbar-nav" >

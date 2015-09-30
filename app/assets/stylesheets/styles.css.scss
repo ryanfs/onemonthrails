@@ -7,8 +7,14 @@
 }
 
 .search-bar {
-    
+    width:800px;
 }
+
+.search-input-field {
+    padding: 5px 20px;
+    width: 37%;
+}
+
 
 .box {
     border: 1px solid #dfdfdf;
@@ -21,6 +27,16 @@
     float: left;
 }
 
+.top-left-nav {
+    margin-top: 25px!important;
+    margin-right: 25px!important;
+    border-radius: 2px;
+    float: left;
+    padding:0 25px;
+    width: 25%;
+    display: block;
+}
+
 .saved-searches {
     border: 1px solid #dfdfdf;
     background-color: white;
@@ -28,14 +44,11 @@
     margin-right: 25px!important;
     padding: 20px;
     border-radius: 2px;
-    margin:0 auto;
     float: left;
     width: 25%;
     display: block;
 }
 
-.search-input-field {
-}
 
 .form-control {
     width: 94%!important;
@@ -209,8 +222,10 @@ header {
 }
 
 .top-nav {
-    float: right;
     border: 0px;
+    position: absolute;
+    top: 12px;
+    right: 12%;
 }
 
 .page-title {
