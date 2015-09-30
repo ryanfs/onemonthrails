@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     get 'about' => 'pages#about' #about_path
     get 'search' => 'pages#search'
     get 'results' => 'pages#show'
-    #get 'jobs' => 'jobs#index'
     resources :pages
     resources :spreadsheets
 
