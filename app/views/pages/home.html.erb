@@ -19,13 +19,26 @@
 		<div class="form-group">
 		
 			<% @results.each do |job| %>
-				<div>
-					<p><strong><%= link_to job.job_title, job.url, target: "_blank" %></strong></p>
-					<p><%= job.company %>, <small><%= job.formatted_location %></small></p>
+				<div class="results-container">
+					<div class="search-details">
+						<div class="company-details"><%= job.company %>, 
+							<small><%= job.formatted_location %></small>
+						</div>
+						<div>
+							<strong><%= link_to job.job_title, job.url, target: "_blank" %></strong>
+							<br />
+							<small class="posted-time">Posted <%= job.formatted_relative_time %></small>
+						</div>
+					
+						<p class="snippet"><%= job.snippet %></p>
+						<hr>
+					</div>
 					
 
+					
+					
 				</div>
-			<hr>
+			
 			<% end %>
 	   </div>
 

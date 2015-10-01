@@ -13,8 +13,31 @@
 .search-input-field {
     padding: 5px 0px 5px 20px;
     width: 37%;
+    border-radius: 3px;
 }
 
+.results-container {
+    width:100%;
+    min-height:100px;
+}
+
+.company-details {
+    float:right;
+    color: #75A9CA;
+}
+
+.search-details {
+    float:left;
+    font-size:1.2em;
+}
+
+.snippet {
+    font-size: 0.8em;
+}
+
+.posted-time {
+    color: #999;
+}
 
 .box {
     border: 1px solid #dfdfdf;
@@ -44,7 +67,7 @@
     padding: 20px;
     border-radius: 2px;
     float: left;
-    width: 25%;
+    max-width: 25%;
     display: block;
 }
 
@@ -206,6 +229,7 @@ header {
     padding: 20px 32px 20px 0px;
     border-bottom:1px solid #dfdfdf;
     height: 32px;
+    background-color: rgba(223, 223, 223, 0.5);
 }
 
 .logo {
