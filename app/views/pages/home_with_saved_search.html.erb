@@ -9,6 +9,11 @@
 <%= render 'layouts/app_header' %>
 
 <div class="container">
+	<div class = 'saved-searches'>
+		Recent Searches
+		<div class="nav-divider"></div>
+		<%= render 'spreadsheets/result' %>
+	</div>
 	<div class='box'>
 		<h2>New Opportunities for <%= "#{current_user.company}" %></h2>
 		<div class="nav-divider"></div>
@@ -18,8 +23,7 @@
 				<% @results.each do |job| %>
 					<div class="results-container">
 						<div class="search-details">
-							<div class="company-details">
-								<%= link_to job.company, "https://www.google.com/search?q="+job.company+" in "+job.formatted_location, target: "_blank" %>,
+							<div class="company-details"><%= job.company %>, 
 								<small><%= job.formatted_location %></small>
 							</div>
 							<div>
