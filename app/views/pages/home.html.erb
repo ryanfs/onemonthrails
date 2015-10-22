@@ -18,12 +18,13 @@
 				<% @results.each do |job| %>
 					<div class="results-container">
 						<div class="search-details">
-							<div class="company-details">
-								<%= link_to job.company, "https://www.google.com/search?q="+job.company+" in "+job.formatted_location, target: "_blank" %>,
-								<small><%= job.formatted_location %></small>
+							<div class="right-details">
+								<%= link_to job.job_title, job.url, target: "_blank" %>
+								
 							</div>
 							<div>
-								<strong><%= link_to job.job_title, job.url, target: "_blank" %></strong>
+								<span class="result-details"><%= link_to job.company, "https://www.google.com/search?q="+job.company+" in "+job.formatted_location, target: "_blank" %></span>,
+								<small><%= job.formatted_location %></small>
 								<br />
 								<small class="posted-time">Posted <%= job.formatted_relative_time %></small>
 							</div>
